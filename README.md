@@ -2,10 +2,13 @@
 
 Demonstrates an issue with swc not transpiling a dependency.
 
-This repository uses Yarn workspaces with Yarn v3. `package-b` depends on `package-a` which exports `testVariable`.
+This repository uses Yarn workspaces with Yarn v3 and the node-modules linker.
+`package-b` depends on `package-a` which exports `testVariable`.
 `package-b` has a single test which imports `testVariable` and checks that it is defined.
 
 `package-a` is not pre-transpiled. It is up to the Jest transformer to transpile it into a CommonJS module.
+`package-b` uses `transformIgnorePatterns` in `jest.config.js` to tell the transformer that `node_modules/package-a`
+needs to be transpiled.
 
 ## Instructions
 
@@ -18,3 +21,5 @@ This repository uses Yarn workspaces with Yarn v3. `package-b` depends on `packa
 ## Test Environment
 
 Windows 10, Node 14.17.6
+
+All JS dependencies are up to date as of this writing.
