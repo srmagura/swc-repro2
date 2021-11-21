@@ -1,8 +1,7 @@
 {
   "compilerOptions": {
     "baseUrl": "src",
-    "target": "es5",
-    "lib": [ "es2017", "dom" ],
+    "target": "ES2019",
     "jsx": "react",
     "allowJs": false,
     "moduleResolution": "node",
