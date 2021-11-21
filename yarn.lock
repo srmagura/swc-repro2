@@ -4731,8 +4731,6 @@ fsevents@^2.3.2:
     "@types/jest": 27.0.3
     babel-jest: ^27.3.1
     jest: ^27.3.1
-    jest-haste-map: ^27.3.1
-    jest-resolve: ^27.3.1
     package-a: "workspace:*"
     typescript: ~4.5.2
   languageName: unknown
